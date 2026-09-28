@@ -3,537 +3,484 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-<title>Whizzlead Media | Video that moves a business priority</title>
-<meta name="description" content="Whizzlead Media turns launches, customer proof, founder stories and executive visibility into campaign-ready video assets. One priority. Two shoot days. One to two hero films plus four shorts."/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f4f2ed'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%230a0a0a' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%233b82f6'/%3E%3C/svg%3E"/>
+<title>Whizzlead Media | Nobody knows you exist. Let's fix that.</title>
+<meta name="description" content="Whizzlead Media helps B2B companies become known, trusted and remembered through founder, customer, product and team stories built for distribution."/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f7f8fb'/%3E%3Ccircle cx='32' cy='32' r='21' fill='none' stroke='%230b0d12' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='9' fill='%232f7df6'/%3E%3C/svg%3E"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f4f2ed;--paper:#fff;--ink:#0a0a0a;--muted:#6f6b64;--line:#d7d2c8;
-  --blue:#3b82f6;--blue-soft:#eaf3ff;--dark:#0b0b0b;--radius:20px;
-  --pad:clamp(20px,4vw,64px);--max:1440px
+  --bg:#f6f7fa;--paper:#fff;--ink:#0a0d13;--muted:#667085;--line:#dfe4ec;
+  --blue:#2f7df6;--blue2:#6ea7ff;--soft:#edf4ff;--navy:#071529;--radius:22px;
+  --pad:clamp(20px,4vw,64px);--max:1420px
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
-.container{width:min(var(--max),100%);margin:auto;padding-inline:var(--pad)}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{width:min(var(--max),100%);margin:auto;padding-inline:var(--pad)}
+.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.09em}
 .blue{color:var(--blue)}
-.mono{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.1em}
+.eyebrow{font:9px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em;color:#8492a6;margin-bottom:12px}
 .header{
-  position:fixed;z-index:70;inset:0 0 auto;height:64px;padding:0 var(--pad);
-  display:flex;align-items:center;justify-content:space-between;
-  background:rgba(244,242,237,.9);backdrop-filter:blur(16px);
-  border-bottom:1px solid rgba(0,0,0,.08)
+ position:fixed;z-index:100;inset:0 0 auto;height:64px;padding:0 var(--pad);
+ display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.9);
+ backdrop-filter:blur(18px);border-bottom:1px solid rgba(15,23,42,.08)
 }
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.045em;font-size:20px}
-.mark{width:34px;height:34px;border:1px solid #111;border-radius:11px;display:grid;place-items:center;background:#fff}
-.mark svg{width:21px;height:21px}
-.nav{display:flex;align-items:center;gap:22px;font:10px "DM Mono",monospace;text-transform:uppercase}
-.nav a{opacity:.7}.nav a:hover{opacity:1}
-.menu{display:none;border:0;background:none;font:11px "DM Mono",monospace;text-transform:uppercase}
+.brandmark{width:34px;height:34px;border:1px solid #111827;border-radius:11px;display:grid;place-items:center;background:#fff}
+.brandmark svg{width:21px;height:21px}
+.nav{display:flex;align-items:center;gap:23px;font:9px "DM Mono",monospace;text-transform:uppercase}
+.nav a{opacity:.72}.nav a:hover{opacity:1}
+.nav .talk{background:var(--blue);color:#fff;border-radius:8px;padding:10px 14px;opacity:1}
+.menu{display:none;border:0;background:none;font:10px "DM Mono",monospace;text-transform:uppercase}
 .mobile-nav{display:none}
-
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  border:1px solid currentColor;border-radius:999px;padding:15px 20px;
-  font:10px "DM Mono",monospace;text-transform:uppercase;transition:.2s
+ display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid #b9c2cf;
+ border-radius:9px;padding:14px 18px;font:10px "DM Mono",monospace;text-transform:uppercase;
+ background:#fff;transition:.2s
 }
-.btn:hover{transform:translateY(-2px);background:#111;color:#fff}
-.btn.bluebtn{background:var(--blue);border-color:var(--blue);color:#08111f}
-.btn.bluebtn:hover{background:#111;color:#fff;border-color:#111}
-.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid currentColor;border-radius:999px;padding:8px 12px;font:9px "DM Mono",monospace;text-transform:uppercase}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--blue)}
-.eyebrow{font:9px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:12px}
+.btn:hover{transform:translateY(-2px);border-color:#0a0d13}
+.btn.primary{background:var(--blue);border-color:var(--blue);color:white}
+.btn.primary:hover{background:#155ed1}
+.arrow{font-size:14px}
 
-/* HERO */
-.hero{
-  min-height:100svh;padding:96px var(--pad) 58px;display:flex;align-items:center;
-  position:relative;border-bottom:1px solid var(--line);overflow:hidden
-}
-.hero-inner{
-  width:min(var(--max),100%);margin:auto;display:grid;
-  grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);
-  gap:clamp(36px,6vw,90px);align-items:center
-}
-.hero h1{
-  font-size:clamp(58px,7vw,106px);line-height:.84;letter-spacing:-.082em;
-  margin:16px 0 0;max-width:9.2ch
-}
+/* hero */
+.hero{min-height:100svh;padding:92px var(--pad) 34px;display:flex;align-items:center;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+.hero-grid{width:min(var(--max),100%);margin:auto;display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(58px,6.7vw,102px);line-height:.84;letter-spacing:-.075em;margin:12px 0 18px;max-width:9.7ch}
 .hero h1 span{display:block}
-.hero-right{max-width:520px;margin-left:auto}
-.hero-right .lead{font-size:clamp(19px,1.6vw,24px);line-height:1.3;letter-spacing:-.02em;margin:0 0 18px;font-weight:600}
-.hero-right .sub{font-size:15px;line-height:1.5;color:var(--muted);margin:0 0 24px}
+.hero-copy{max-width:680px}
+.hero-copy p{font-size:clamp(16px,1.25vw,20px);line-height:1.45;margin:0 0 22px;color:#273244}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap}
-.hero-value{
-  margin-top:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  display:grid;grid-template-columns:repeat(4,1fr)
-}
-.hero-value div{padding:13px 12px 13px 0}
-.hero-value div+div{padding-left:12px;border-left:1px solid var(--line)}
-.hero-value b{display:block;font-size:19px;letter-spacing:-.04em}
-.hero-value span{font:8px "DM Mono",monospace;text-transform:uppercase;color:var(--muted);line-height:1.45}
-.hero-callout{margin-top:16px;font:9px "DM Mono",monospace;text-transform:uppercase;color:#313131}
-.hero-callout strong{color:var(--blue);font-weight:500}
+.hero-audience{margin-top:26px;display:flex;gap:8px;flex-wrap:wrap}
+.aud{display:inline-flex;align-items:center;gap:8px;padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font:9px "DM Mono",monospace;text-transform:uppercase}
+.aud i{display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--soft);color:var(--blue);font-style:normal;font-weight:700}
+.hero-visual{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:1fr .58fr;gap:10px;height:min(68vh,610px);min-height:440px}
+.hero-card{position:relative;overflow:hidden;border-radius:18px;border:1px solid #d9e1ec;background:#dce8f8}
+.hero-card.main{grid-row:1/3}
+.hero-card img{transition:transform .6s ease}
+.hero-card:hover img{transform:scale(1.035)}
+.hero-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(3,11,22,.55))}
+.visual-note{position:absolute;z-index:2;left:16px;bottom:15px;color:white;font:9px "DM Mono",monospace;text-transform:uppercase}
+.metric-card{background:var(--navy);color:white;padding:18px;display:flex;flex-direction:column;justify-content:space-between}
+.metric-card:after{display:none}
+.metric-card .small{font:9px "DM Mono",monospace;text-transform:uppercase;color:#aac3e8}
+.metric-card h3{font-size:clamp(24px,2.3vw,36px);letter-spacing:-.05em;line-height:.95;margin:12px 0}
+.bars{display:flex;align-items:end;gap:7px;height:80px}
+.bars span{flex:1;background:linear-gradient(180deg,#6facff,#2f7df6);border-radius:5px 5px 0 0;animation:rise 1.2s both}
+.bars span:nth-child(1){height:26%;animation-delay:.05s}.bars span:nth-child(2){height:38%;animation-delay:.12s}.bars span:nth-child(3){height:48%;animation-delay:.19s}.bars span:nth-child(4){height:62%;animation-delay:.26s}.bars span:nth-child(5){height:80%;animation-delay:.33s}.bars span:nth-child(6){height:100%;animation-delay:.4s}
+@keyframes rise{from{height:0}}
+.scribble{position:absolute;z-index:3;color:#111827;font:500 15px/1.1 "DM Mono",monospace;transform:rotate(-4deg);background:rgba(255,255,255,.82);padding:7px 9px;border-radius:8px;box-shadow:0 4px 18px rgba(15,23,42,.09)}
+.scribble.one{top:12px;left:-18px}.scribble.two{top:12px;right:-15px}
 
-/* generic */
-.section{min-height:100svh;padding:78px var(--pad) 48px;display:flex;align-items:center}
+/* sections */
+.section{padding:88px var(--pad)}
 .section-inner{width:min(var(--max),100%);margin:auto}
-.section-head{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:end;margin-bottom:26px}
-.section-head h2{font-size:clamp(42px,4.9vw,74px);line-height:.87;letter-spacing:-.07em;margin:0;max-width:11.5ch}
-.section-head p{font-size:14px;line-height:1.5;color:var(--muted);max-width:500px;margin:0 0 5px auto}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:flex-end;margin-bottom:28px}
+.section-head h2{font-size:clamp(42px,4.7vw,70px);line-height:.88;letter-spacing:-.067em;margin:0;max-width:13ch}
+.section-head p{max-width:460px;color:var(--muted);font-size:14px;line-height:1.5;margin:0}
 
-/* Business priority */
-.priorities{background:#fff}
-.priority-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.priority{
-  border:1px solid var(--line);border-radius:var(--radius);padding:22px;min-height:310px;
-  display:flex;flex-direction:column;justify-content:space-between;transition:.2s
-}
-.priority:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 14px 38px rgba(59,130,246,.1)}
-.priority .top{font:9px "DM Mono",monospace;text-transform:uppercase;color:var(--blue)}
-.priority h3{font-size:clamp(30px,2.8vw,42px);line-height:.9;letter-spacing:-.055em;margin:46px 0 14px}
-.priority p{font-size:13px;line-height:1.45;color:var(--muted);margin:0}
-.priority .best{margin-top:18px;padding-top:12px;border-top:1px solid var(--line);font:8px "DM Mono",monospace;text-transform:uppercase;line-height:1.5}
+/* problem */
+.problem{background:linear-gradient(180deg,#edf5ff,#e5f0fc);position:relative;overflow:hidden}
+.problem-grid{display:grid;grid-template-columns:.72fr 1.28fr;gap:24px;align-items:center}
+.problem h2{font-size:clamp(44px,5.2vw,78px);line-height:.88;letter-spacing:-.07em;margin:0 0 12px;max-width:8ch}
+.problem p{color:#40536e;font-size:14px;line-height:1.5;max-width:400px}
+.outbound-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative}
+.outbound-flow:before{content:"";position:absolute;left:8%;right:8%;top:50%;height:2px;background:#a9ccff;z-index:0}
+.flow{position:relative;z-index:1;background:#fff;border:1px solid #d4e2f5;border-radius:14px;padding:20px 13px;min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transition:.2s}
+.flow:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(47,125,246,.12)}
+.flow-icon{width:40px;height:40px;border-radius:12px;background:var(--soft);color:var(--blue);display:grid;place-items:center;font-size:20px;margin-bottom:12px}
+.flow b{font-size:12px;line-height:1.25}
+.problem-callout{margin-top:20px;text-align:right;font:12px "DM Mono",monospace;color:#365b91}
+.problem-callout strong{color:#0a0d13}
 
-/* scenarios */
-.scenarios{background:#0b0b0b;color:#f6f5ef}
-.scenarios .eyebrow,.scenarios .section-head p{color:#9e9e9e}
-.scenario-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.scenario{
-  border:1px solid #303030;border-radius:var(--radius);padding:18px;min-height:205px;
-  display:flex;flex-direction:column;justify-content:space-between;transition:.22s
-}
-.scenario:hover{background:var(--blue);color:#08111f;border-color:var(--blue);transform:translateY(-3px)}
-.scenario .n{font:9px "DM Mono",monospace;text-transform:uppercase;opacity:.65}
-.scenario h3{font-size:clamp(24px,2.1vw,34px);line-height:.9;letter-spacing:-.055em;margin:24px 0 10px}
-.scenario p{font-size:11px;line-height:1.42;color:#aaa;margin:0}
-.scenario:hover p{color:#13213b}
-.scenario .use{margin-top:12px;padding-top:9px;border-top:1px solid currentColor;font:8px "DM Mono",monospace;text-transform:uppercase;line-height:1.45}
+/* model */
+.model{background:white}
+.model-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}
+.model-tab{border:1px solid var(--line);background:#fff;border-radius:16px;padding:18px;text-align:left;cursor:pointer;transition:.2s;min-height:150px}
+.model-tab.active{background:var(--soft);border-color:#8bb8fb;box-shadow:inset 0 0 0 1px #8bb8fb}
+.model-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e9f2ff;color:var(--blue);font:10px "DM Mono",monospace;margin-bottom:24px}
+.model-tab b{display:block;font-size:18px;letter-spacing:-.035em}
+.model-tab small{display:block;margin-top:6px;color:var(--muted);font-size:11px;line-height:1.4}
+.model-detail{margin-top:10px;border-radius:18px;background:var(--navy);color:white;padding:24px;display:grid;grid-template-columns:.7fr 1.3fr;gap:36px;align-items:center}
+.model-detail h3{font-size:clamp(32px,3.5vw,52px);letter-spacing:-.06em;line-height:.92;margin:0}
+.model-detail p{margin:0;color:#b9c9de;line-height:1.55;font-size:14px}
 
-/* value section */
-.value{background:var(--blue);color:#08111f}
-.value .eyebrow,.value .section-head p{color:#17335c}
-.value-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
-.value-card{background:rgba(255,255,255,.84);border-radius:var(--radius);padding:26px}
-.value-card h3{font-size:clamp(34px,3.7vw,56px);line-height:.88;letter-spacing:-.065em;margin:0 0 16px}
-.value-card p{font-size:14px;line-height:1.5;margin:0;color:#253b5e}
-.stack{background:#fff;border-radius:var(--radius);padding:26px}
-.stack-row{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:14px 0;border-top:1px solid #d7dfea}
-.stack-row:first-child{border-top:0;padding-top:0}
-.stack-row span{font:9px "DM Mono",monospace;color:#58708e}
-.stack-row b{display:block;font-size:15px}
-.stack-row small{display:block;color:#5e6e82;font-size:12px;line-height:1.45;margin-top:3px}
+/* stories */
+.stories{background:#f7f9fc}
+.story-track{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.story-card{position:relative;overflow:hidden;border-radius:16px;min-height:285px;background:#d8dde6;grid-column:span 4;cursor:pointer}
+.story-card.small{grid-column:span 3;min-height:240px}
+.story-card img{transition:transform .55s}
+.story-card:hover img{transform:scale(1.045)}
+.story-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,9,18,.82))}
+.story-label{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;color:white}
+.story-label b{font-size:clamp(21px,2vw,30px);line-height:.95;letter-spacing:-.045em}
+.story-label span{display:block;font:8px "DM Mono",monospace;text-transform:uppercase;margin-top:7px;color:#dce8fa}
+.story-arrow{position:absolute;z-index:3;right:12px;bottom:12px;width:32px;height:32px;border-radius:50%;background:white;color:var(--blue);display:grid;place-items:center;font-weight:800}
+.story-pop{position:fixed;z-index:200;inset:0;background:rgba(5,10,18,.58);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:20px}
+.story-pop.open{display:flex}
+.story-modal{width:min(680px,100%);background:#fff;border-radius:22px;padding:28px;position:relative}
+.story-modal .close{position:absolute;right:18px;top:14px;border:0;background:none;font-size:28px;cursor:pointer}
+.story-modal h3{font-size:clamp(34px,5vw,56px);letter-spacing:-.06em;line-height:.9;margin:20px 0 14px}
+.story-modal p{color:var(--muted);line-height:1.55}
+.modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.modal-tags span{border:1px solid var(--line);border-radius:999px;padding:8px 10px;font:8px "DM Mono",monospace;text-transform:uppercase}
+
+/* proof */
+.proof{background:#eef5ff}
+.proof-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:14px}
+.video-box{background:#08111f;border-radius:18px;overflow:hidden;aspect-ratio:16/9}
+.video-box iframe{width:100%;height:100%;border:0}
+.proof-side{background:white;border:1px solid #dfe7f2;border-radius:18px;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
+.proof-side h3{font-size:clamp(34px,3.5vw,54px);line-height:.9;letter-spacing:-.06em;margin:0 0 18px}
+.proof-side p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
+.proof-points{margin-top:26px;display:grid;gap:0}
+.proof-point{padding:12px 0;border-top:1px solid var(--line);font-size:12px;display:grid;grid-template-columns:26px 1fr;gap:8px}
+.proof-point span{color:var(--blue);font-family:"DM Mono",monospace}
 
 /* process */
 .process{background:#fff}
-.steps{border-top:1px solid var(--line)}
-.step{display:grid;grid-template-columns:52px .7fr 1.3fr;gap:20px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
-.step .n{font:9px "DM Mono",monospace}
-.step h3{font-size:clamp(22px,2vw,31px);letter-spacing:-.05em;margin:0}
-.step p{font-size:12px;line-height:1.45;color:var(--muted);margin:0}
-
-/* engagement examples */
-.engagements{background:var(--bg)}
-.engage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.engage{border:1px solid var(--line);background:#fff;border-radius:var(--radius);padding:19px}
-.engage .n{font:9px "DM Mono",monospace;text-transform:uppercase;color:var(--blue)}
-.engage h3{font-size:clamp(24px,2.1vw,33px);line-height:.92;letter-spacing:-.055em;margin:18px 0 12px}
-.engage ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
-.engage li{padding:8px 0;border-bottom:1px solid var(--line);font-size:11px}
-.engage small{display:block;margin-top:12px;font:8px "DM Mono",monospace;text-transform:uppercase;line-height:1.45;color:var(--muted)}
-
-/* proof */
-.proof{background:#111;color:#fff}
-.proof-wrap{display:grid;grid-template-columns:.72fr 1.28fr;gap:14px;align-items:center}
-.proof-copy{border:1px solid #333;border-radius:var(--radius);padding:24px;min-height:390px;display:flex;flex-direction:column;justify-content:space-between}
-.proof-copy h2{font-size:clamp(40px,4.5vw,66px);line-height:.85;letter-spacing:-.07em;margin:10px 0 22px}
-.proof-copy p{font-size:13px;line-height:1.5;color:#aaa;max-width:430px}
-.video{border-radius:var(--radius);overflow:hidden;background:#000;aspect-ratio:16/9}
-.video iframe{width:100%;height:100%;border:0}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.process-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.process-img{height:155px}
+.process-body{padding:17px}
+.process-body .n{display:inline-grid;place-items:center;width:29px;height:29px;border-radius:50%;background:var(--soft);color:var(--blue);font:9px "DM Mono",monospace;margin-bottom:12px}
+.process-body h3{font-size:24px;letter-spacing:-.045em;margin:0 0 7px}
+.process-body p{font-size:11px;line-height:1.45;color:var(--muted);margin:0}
 
 /* price */
-.price{background:#ece8e0}
-.price-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:12px}
-.price-main{background:#111;color:#fff;border-radius:var(--radius);padding:28px;min-height:445px;display:flex;flex-direction:column;justify-content:space-between}
-.price-kicker{font:9px "DM Mono",monospace;text-transform:uppercase;color:#aaa}
-.amount{font-size:clamp(64px,6.2vw,96px);font-weight:900;letter-spacing:-.082em;line-height:.78}
-.amount small{display:block;font:9px "DM Mono",monospace;text-transform:uppercase;color:#aaa;letter-spacing:.08em;margin:16px 0 0 4px}
-.price-main h3{font-size:clamp(30px,3vw,44px);line-height:.9;letter-spacing:-.06em;margin:0;max-width:10ch}
-.price-main p{font-size:13px;line-height:1.5;color:#aaa;max-width:520px;margin:13px 0 0}
-.includes{background:#fff;border:1px solid #d0cbc2;border-radius:var(--radius);padding:24px}
-.includes h3{font-size:clamp(28px,2.7vw,41px);letter-spacing:-.055em;margin:0 0 15px}
-.inc{display:grid;grid-template-columns:34px 1fr;gap:11px;padding:10px 0;border-top:1px solid var(--line)}
-.inc span{font:9px "DM Mono",monospace;color:var(--muted)}
-.inc b{font-size:13px}
-.inc small{display:block;font-size:11px;line-height:1.4;color:var(--muted);margin-top:2px}
-.price-note{
-  margin-top:15px;padding:13px 14px;border-radius:14px;background:var(--blue-soft);
-  font-size:12px;line-height:1.45;color:#244a7d
-}
-.price-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.price{background:linear-gradient(180deg,#eaf4ff,#f6f9fc)}
+.price-grid{display:grid;grid-template-columns:.85fr .75fr .65fr;gap:12px;align-items:stretch}
+.price-intro{padding:20px 0}
+.price-intro h2{font-size:clamp(42px,4.8vw,70px);line-height:.88;letter-spacing:-.07em;margin:0 0 18px}
+.price-intro p{font-size:14px;line-height:1.5;color:var(--muted);max-width:450px}
+.price-card,.founder-card{border-radius:18px;padding:24px;background:white;border:1px solid #dbe5f0;display:flex;flex-direction:column}
+.price-badge{align-self:flex-start;background:var(--blue);color:white;border-radius:999px;padding:6px 9px;font:8px "DM Mono",monospace;text-transform:uppercase;margin-bottom:14px}
+.amount{font-size:clamp(42px,4.3vw,64px);font-weight:900;letter-spacing:-.07em;line-height:.9}
+.amount small{font:10px "DM Mono",monospace;text-transform:uppercase;margin-left:5px}
+.price-list{list-style:none;padding:0;margin:24px 0;display:grid;gap:10px}
+.price-list li{font-size:12px;display:grid;grid-template-columns:20px 1fr;gap:6px}
+.price-list i{font-style:normal;color:var(--blue)}
+.price-card .btn{margin-top:auto}
+.founder-card{background:linear-gradient(145deg,#061528,#0b315a);color:white;border-color:#153f69}
+.founder-card h3{font-size:clamp(32px,3vw,46px);line-height:.9;letter-spacing:-.055em;margin:0 0 12px}
+.founder-card p{font-size:12px;line-height:1.5;color:#c9dbef}
+.founder-list{list-style:none;padding:0;margin:16px 0 24px;display:grid;gap:11px}
+.founder-list li{font-size:11px;display:grid;grid-template-columns:20px 1fr;gap:7px}
+.founder-card .btn{margin-top:auto}
 
-/* reuse */
-.reuse{background:#fff}
-.reuse-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}
-.reuse h2{font-size:clamp(42px,4.8vw,72px);line-height:.88;letter-spacing:-.07em;margin:0}
-.reuse-map{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
-.reuse-map div{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--bg)}
-.reuse-map b{display:block;font-size:16px;letter-spacing:-.03em}
-.reuse-map span{display:block;margin-top:4px;font:8px "DM Mono",monospace;text-transform:uppercase;color:var(--muted);line-height:1.4}
-
-/* founder offer */
-.founder{background:#0b0b0b;color:#fff}
-.founder-box{border:1px solid #333;border-radius:var(--radius);padding:36px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:end}
-.founder h2{font-size:clamp(42px,5vw,74px);line-height:.84;letter-spacing:-.075em;margin:10px 0 0}
-.founder-copy p{font-size:15px;line-height:1.5;color:#bbb;margin:0 0 20px}
-.founder-stat{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-.founder-stat span{border:1px solid #444;border-radius:999px;padding:8px 10px;font:9px "DM Mono",monospace;text-transform:uppercase}
-
-/* contact */
-.contact{min-height:100svh;padding:88px var(--pad) 28px;background:var(--blue);color:#08111f;display:flex;flex-direction:column;justify-content:center}
-.contact-inner{width:min(var(--max),100%);margin:auto;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
-.contact h2{font-size:clamp(52px,6.6vw,96px);line-height:.82;letter-spacing:-.075em;margin:0;max-width:8.5ch}
-.contact p{font-size:17px;line-height:1.5;margin:0 0 22px}
-.contact .btn:hover{background:#08111f;color:#fff}
-.footer{width:min(var(--max),100%);margin:54px auto 0;border-top:1px solid rgba(8,17,31,.28);padding-top:18px;display:flex;justify-content:space-between;gap:18px;font:9px "DM Mono",monospace;text-transform:uppercase}
-
-/* laptop height */
-@media(min-width:1001px) and (max-height:820px){
-  .hero{padding-top:82px;padding-bottom:42px}
-  .hero h1{font-size:clamp(54px,6.1vw,88px)}
-  .hero-right .lead{font-size:18px}
-  .hero-right .sub{font-size:14px;margin-bottom:16px}
-  .hero-value{margin-top:18px}
-  .section{padding-top:70px;padding-bottom:36px}
-  .section-head h2{font-size:clamp(38px,4.2vw,62px)}
-  .priority{min-height:250px}
-  .priority h3{margin:28px 0 10px}
-  .scenario{min-height:180px}
-  .scenario h3{margin:18px 0 8px}
-  .proof-copy{min-height:340px}
-  .price-main{min-height:395px}
-}
-
-/* tablet */
-@media(max-width:1000px){
-  .hero{min-height:auto;padding-top:110px;padding-bottom:70px}
-  .hero-inner,.section-head,.value-grid,.proof-wrap,.price-grid,.reuse-wrap,.founder-box,.contact-inner{grid-template-columns:1fr}
-  .hero-right{margin-left:0;max-width:700px}
-  .hero h1{font-size:clamp(60px,13vw,110px);max-width:9ch}
-  .section{min-height:auto}
-  .priority-grid,.scenario-grid{grid-template-columns:repeat(2,1fr)}
-  .engage-grid{grid-template-columns:repeat(2,1fr)}
-  .section-head p{margin-left:0}
-  .reuse-map{grid-template-columns:repeat(3,1fr)}
-}
+/* footer */
+.footer{padding:30px var(--pad);background:white;border-top:1px solid var(--line)}
+.footer-in{width:min(var(--max),100%);margin:auto;display:flex;justify-content:space-between;gap:20px;align-items:center;font:9px "DM Mono",monospace;text-transform:uppercase;color:#657386}
 
 /* mobile */
-@media(max-width:760px){
-  :root{--radius:17px}
-  .header{height:60px;padding-inline:18px}
-  .nav{display:none}.menu{display:block}
-  .mobile-nav{position:fixed;z-index:90;inset:0;background:#111;color:#fff;padding:82px 22px 24px;flex-direction:column;gap:18px}
-  .mobile-nav.open{display:flex}
-  .mobile-nav a{font-size:clamp(28px,9vw,44px);font-weight:800;letter-spacing:-.05em}
-  .mobile-nav .close{position:absolute;right:20px;top:18px;border:0;background:none;color:#fff;font-size:28px}
-  .hero{padding:100px 20px 58px}
-  .hero h1{font-size:clamp(50px,16vw,76px);max-width:none}
-  .hero-right .lead{font-size:19px}
-  .hero-right .sub{font-size:14px}
-  .hero-value{grid-template-columns:repeat(2,1fr)}
-  .hero-value div:nth-child(3){border-left:0;border-top:1px solid var(--line)}
-  .hero-value div:nth-child(4){border-top:1px solid var(--line)}
-  .section{padding:70px 20px 42px}
-  .section-head{gap:18px}
-  .section-head h2{font-size:clamp(43px,13vw,66px)}
-  .priority-grid,.scenario-grid,.engage-grid{grid-template-columns:1fr}
-  .priority{min-height:240px}
-  .step{grid-template-columns:38px 1fr;gap:10px}
-  .step p{grid-column:2}
-  .price-main{min-height:390px;padding:22px}
-  .includes{padding:21px}
-  .amount{font-size:clamp(60px,19vw,90px)}
-  .reuse-map{grid-template-columns:1fr 1fr}
-  .founder-box{padding:22px}
-  .contact{min-height:auto;padding:86px 20px 28px}
-  .contact h2{font-size:clamp(54px,16vw,82px)}
-  .footer{flex-direction:column;margin-top:52px}
+@media(max-width:1050px){
+ .hero-grid,.problem-grid,.proof-grid,.price-grid{grid-template-columns:1fr}
+ .hero{min-height:auto;padding-top:110px}
+ .hero-visual{height:520px}
+ .outbound-flow{grid-template-columns:repeat(5,1fr)}
+ .model-detail{grid-template-columns:1fr}
+ .price-intro{padding-bottom:0}
 }
-@media(max-width:420px){
-  .brand{font-size:17px}.mark{width:30px;height:30px}
-  .hero h1{font-size:clamp(48px,15.8vw,68px)}
-  .reuse-map{grid-template-columns:1fr}
+@media(max-width:760px){
+ .header{height:60px;padding-inline:18px}.nav{display:none}.menu{display:block}
+ .mobile-nav{position:fixed;z-index:120;inset:0;background:#071529;color:white;padding:84px 22px 24px;flex-direction:column;gap:18px}
+ .mobile-nav.open{display:flex}
+ .mobile-nav a{font-size:clamp(28px,9vw,44px);font-weight:800;letter-spacing:-.05em}
+ .mobile-nav .close{position:absolute;right:20px;top:18px;border:0;background:none;color:white;font-size:30px}
+ .hero{padding:94px 20px 36px}.hero-grid{gap:30px}
+ .hero h1{font-size:clamp(52px,15vw,74px);max-width:none}
+ .hero-copy p{font-size:16px}.hero-visual{height:450px;min-height:0}
+ .section{padding:68px 20px}.section-head{display:block}.section-head p{margin-top:14px}
+ .outbound-flow{grid-template-columns:1fr 1fr;gap:8px}.outbound-flow:before{display:none}.flow{min-height:120px}
+ .outbound-flow .flow:last-child{grid-column:1/3}
+ .problem-callout{text-align:left}
+ .model-tabs{grid-template-columns:1fr 1fr}.model-tab{min-height:135px}
+ .story-track{display:flex;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+ .story-card,.story-card.small{min-width:82vw;min-height:280px;scroll-snap-align:start}
+ .process-grid{grid-template-columns:1fr 1fr}.process-img{height:130px}
+ .price-grid{gap:10px}.footer-in{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:460px){
+ .brand{font-size:17px}.brandmark{width:30px;height:30px}
+ .hero h1{font-size:clamp(48px,15vw,66px)}
+ .hero-visual{grid-template-columns:1fr 1fr;height:410px}
+ .hero-card.main{grid-row:1/3}
+ .scribble{font-size:11px}
+ .model-tabs{grid-template-columns:1fr}
+ .process-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
 <header class="header">
-  <a class="brand" href="#top" aria-label="Whizzlead Media home">
-    <span class="mark"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="12.5" stroke="currentColor" stroke-width="2.4"/><circle cx="18" cy="18" r="5.2" fill="#3b82f6"/></svg></span>
+  <a class="brand" href="#top">
+    <span class="brandmark"><svg viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="12.5" stroke="currentColor" stroke-width="2.4"/><circle cx="18" cy="18" r="5.2" fill="#2f7df6"/></svg></span>
     <span><span class="blue">WHIZZLEAD</span> MEDIA</span>
   </a>
   <nav class="nav">
-    <a href="#priorities">Outcomes</a>
-    <a href="#scenarios">What we shoot</a>
-    <a href="#investment">₹2L package</a>
+    <a href="#problem">Why</a>
+    <a href="#model">Model</a>
+    <a href="#stories">Stories</a>
     <a href="#proof">Proof</a>
+    <a href="#process">Process</a>
+    <a href="#investment">Investment</a>
     <a href="/founders-offer.html">Founder offer</a>
-    <a href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">Talk to us ↗</a>
+    <a class="talk" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">Talk to us ↗</a>
   </nav>
   <button class="menu" id="menuBtn">Menu</button>
 </header>
 
 <div class="mobile-nav" id="mobileNav">
   <button class="close" id="menuClose">×</button>
-  <a href="#priorities">Outcomes</a>
-  <a href="#scenarios">What we shoot</a>
-  <a href="#investment">₹2L package</a>
-  <a href="#proof">Proof</a>
+  <a href="#problem">Why</a><a href="#model">Model</a><a href="#stories">Stories</a>
+  <a href="#proof">Proof</a><a href="#process">Process</a><a href="#investment">Investment</a>
   <a href="/founders-offer.html">Founder offer</a>
   <a href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">Talk to us ↗</a>
 </div>
 
 <main id="top">
+
 <section class="hero">
-  <div class="hero-inner">
-    <div>
-      <span class="pill"><span class="dot"></span> Outcome-led corporate video</span>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow">Strategic video for B2B brands</div>
       <h1>
-        <span>ONE BUSINESS</span>
-        <span>PRIORITY.</span>
-        <span class="blue">TURN IT INTO</span>
-        <span class="blue">VIDEO THAT WORKS.</span>
+        <span>NOBODY KNOWS</span>
+        <span>YOU EXIST.</span>
+        <span class="blue">LET'S FIX THAT.</span>
+        <span>ONE STORY AT A TIME.</span>
       </h1>
-    </div>
-    <div class="hero-right">
-      <p class="lead">Launching something? Need stronger customer proof? Building founder visibility? Hiring? We build the video around the outcome.</p>
-      <p class="sub">You get the strategy, concept, production and post in one engagement, then a set of assets that can work across website, sales, LinkedIn, YouTube and campaigns.</p>
+      <p>Your outbound should not have to introduce you, prove you and persuade you in the same message. We create the stories that make your brand known before sales asks for the meeting.</p>
       <div class="hero-actions">
-        <a class="btn bluebtn" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">PLAN THE SHOOT ↗</a>
-        <a class="btn" href="#investment">SEE THE ₹2L PACKAGE ↓</a>
+        <a class="btn primary" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">PLAN YOUR SHOOT <span class="arrow">↗</span></a>
+        <a class="btn" href="#stories">SEE THE STORIES <span class="arrow">↓</span></a>
       </div>
-      <div class="hero-value">
-        <div><b>₹2L</b><span>+ GST</span></div>
-        <div><b>2</b><span>Production days</span></div>
-        <div><b>1–2</b><span>Hero films</span></div>
-        <div><b>4</b><span>Supporting shorts</span></div>
+      <div class="hero-audience">
+        <span class="aud"><i>F</i> Founders</span>
+        <span class="aud"><i>C</i> CMOs</span>
+        <span class="aud"><i>B</i> B2B teams</span>
+        <span class="aud"><i>P</i> Customer proof</span>
       </div>
-      <div class="hero-callout"><strong>One accountable partner</strong> from concept to platform-ready delivery.</div>
     </div>
-  </div>
-</section>
 
-<section class="section priorities" id="priorities">
-  <div class="section-inner">
-    <div class="eyebrow">01 / What are you trying to move?</div>
-    <div class="section-head">
-      <h2>START WITH THE <span class="blue">BUSINESS OUTCOME.</span></h2>
-      <p>The format comes second. First, we identify what needs to change after someone watches.</p>
-    </div>
-    <div class="priority-grid">
-      <article class="priority">
-        <div class="top">Launch</div>
-        <div><h3>MAKE THE MARKET GET IT.</h3><p>Turn a product, service or new category into a story buyers can understand quickly.</p><div class="best">Best fit: product film · founder interview · launch shorts</div></div>
-      </article>
-      <article class="priority">
-        <div class="top">Trust</div>
-        <div><h3>MAKE THE PROOF FEEL REAL.</h3><p>Let customers, founders and teams explain the value in a way a deck never can.</p><div class="best">Best fit: testimonial · customer interview · brand story</div></div>
-      </article>
-      <article class="priority">
-        <div class="top">Authority</div>
-        <div><h3>MAKE YOUR PEOPLE THE SIGNAL.</h3><p>Turn executive thinking into visible authority people associate with your company.</p><div class="best">Best fit: CXO POV · founder story · podcast</div></div>
-      </article>
-      <article class="priority">
-        <div class="top">Hiring</div>
-        <div><h3>SHOW WHY PEOPLE SHOULD JOIN.</h3><p>Make the team, work and culture visible before candidates enter the interview process.</p><div class="best">Best fit: team film · day in the life · culture story</div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="section scenarios" id="scenarios">
-  <div class="section-inner">
-    <div class="eyebrow">02 / What we shoot</div>
-    <div class="section-head">
-      <h2>THE FORMAT FOLLOWS THE <span class="blue">MOMENT.</span></h2>
-      <p>Choose the business moment. We shape the concept, production and edit around what that moment needs to achieve.</p>
-    </div>
-    <div class="scenario-grid">
-      <article class="scenario"><div class="n">01</div><div><h3>BRAND STORY</h3><p>Why you exist, what you believe and why customers should care.</p><div class="use">Trust · Positioning · Website</div></div></article>
-      <article class="scenario"><div class="n">02</div><div><h3>PRODUCT OR SERVICE LAUNCH</h3><p>Turn a launch into something more memorable than an announcement post.</p><div class="use">Awareness · Understanding · Demand</div></div></article>
-      <article class="scenario"><div class="n">03</div><div><h3>FOUNDER STORY</h3><p>The origin, conviction, difficult calls and perspective behind the company.</p><div class="use">Authority · Affinity · Trust</div></div></article>
-      <article class="scenario"><div class="n">04</div><div><h3>TEAM STORY</h3><p>Show the people, thinking and craft behind the business.</p><div class="use">Employer brand · Recruiting</div></div></article>
-      <article class="scenario"><div class="n">05</div><div><h3>DAY IN THE LIFE OF A CXO</h3><p>Follow a leader through the decisions and conversations shaping the company.</p><div class="use">Executive visibility · Thought leadership</div></div></article>
-      <article class="scenario"><div class="n">06</div><div><h3>CUSTOMER TESTIMONIAL</h3><p>Let the customer explain the problem, experience and outcome in their own words.</p><div class="use">Proof · Sales · Conversion</div></div></article>
-      <article class="scenario"><div class="n">07</div><div><h3>CUSTOMER INTERVIEW</h3><p>Go deeper than a testimonial with an intelligent conversation around the customer's world.</p><div class="use">Advocacy · Category authority</div></div></article>
-      <article class="scenario"><div class="n">08</div><div><h3>PODCAST</h3><p>Create one long-form conversation that can generate depth and a bank of reusable clips.</p><div class="use">Authority · Relationships · Repurposing</div></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section value">
-  <div class="section-inner">
-    <div class="eyebrow">03 / Why the ₹2L engagement makes sense</div>
-    <div class="section-head">
-      <h2>YOU ARE NOT BUYING <span style="color:#fff">A VIDEO.</span></h2>
-      <p>You are buying one accountable team to turn a priority into a coherent set of assets, without coordinating multiple specialists yourself.</p>
-    </div>
-    <div class="value-grid">
-      <div class="value-card">
-        <h3>ONE TEAM. ONE BRIEF. ONE OUTCOME.</h3>
-        <p>No handoff between a strategy freelancer, production crew, editor and repurposing team. We own the whole workflow so the story stays coherent from the first idea to the final export.</p>
+    <div class="hero-visual">
+      <div class="hero-card main">
+        <img src="https://images.unsplash.com/photo-1758518727820-28491c194bee?auto=format&fit=crop&w=1200&q=82" alt="Business leaders discussing strategy in a modern office"/>
+        <span class="scribble one">Real people.<br>Real stories.</span>
+        <div class="visual-note">Make the company feel known before the first sales touch.</div>
       </div>
-      <div class="stack">
-        <div class="stack-row"><span>01</span><div><b>Strategy and concept</b><small>What the asset needs to achieve, who it is for and what story will move that outcome.</small></div></div>
-        <div class="stack-row"><span>02</span><div><b>Pre-production</b><small>Structure, interview direction, talking points, shot plan, scheduling and logistics.</small></div></div>
-        <div class="stack-row"><span>03</span><div><b>Two production days</b><small>Professional capture with the people, locations and setups required for the story.</small></div></div>
-        <div class="stack-row"><span>04</span><div><b>Post-production</b><small>Edit, pacing, story shaping, finishing and platform-ready versions.</small></div></div>
-        <div class="stack-row"><span>05</span><div><b>1–2 hero films + 4 shorts</b><small>One priority becomes a small campaign, not a one-off upload.</small></div></div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1758599543154-af711da44cbe?auto=format&fit=crop&w=900&q=82" alt="Business leaders talking outside an office"/>
+        <span class="scribble two">From content<br>to pipeline.</span>
+      </div>
+      <div class="hero-card metric-card">
+        <span class="small">The goal</span>
+        <h3>MORE FAMILIARITY.<br>STRONGER PIPELINE.</h3>
+        <div class="bars"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section process">
-  <div class="section-inner">
-    <div class="eyebrow">04 / How we work</div>
-    <div class="section-head">
-      <h2>DONE FOR YOU, WITHOUT THE <span class="blue">AGENCY DRAG.</span></h2>
-      <p>The process is designed around busy founders, CXOs and marketing teams. You give us the priority and access. We carry the production load.</p>
+<section class="section problem" id="problem">
+  <div class="section-inner problem-grid">
+    <div>
+      <div class="eyebrow">01 / The problem</div>
+      <h2>OUTBOUND IS DOING TOO MUCH.</h2>
+      <p>A cold message is being asked to carry the full burden of awareness, explanation, credibility, trust and conversion.</p>
     </div>
-    <div class="steps">
-      <div class="step"><div class="n">01</div><h3>DEFINE THE OUTCOME</h3><p>What needs to happen after someone watches?</p></div>
-      <div class="step"><div class="n">02</div><h3>FIND THE STORY</h3><p>We identify the strongest narrative, proof, people and moments.</p></div>
-      <div class="step"><div class="n">03</div><h3>BUILD THE CONCEPT</h3><p>Structure, interview direction, talking points, visual treatment and shoot plan.</p></div>
-      <div class="step"><div class="n">04</div><h3>SHOOT</h3><p>Two production days to capture the hero material and supporting content.</p></div>
-      <div class="step"><div class="n">05</div><h3>EDIT</h3><p>One or two long-form hero assets plus four short-form derivatives.</p></div>
-      <div class="step"><div class="n">06</div><h3>PUT IT TO WORK</h3><p>Delivered for website, LinkedIn, YouTube, sales, recruiting or campaign use.</p></div>
+    <div>
+      <div class="outbound-flow">
+        <div class="flow"><div class="flow-icon">◉</div><b>Introduce<br>the company</b></div>
+        <div class="flow"><div class="flow-icon">▤</div><b>Explain<br>the offer</b></div>
+        <div class="flow"><div class="flow-icon">◇</div><b>Build<br>credibility</b></div>
+        <div class="flow"><div class="flow-icon">◎</div><b>Create<br>trust</b></div>
+        <div class="flow"><div class="flow-icon">↗</div><b>Get the<br>meeting</b></div>
+      </div>
+      <div class="problem-callout"><strong>The better job:</strong> make outbound remind people of you, not explain you from scratch.</div>
     </div>
   </div>
 </section>
 
-<section class="section engagements">
+<section class="section model" id="model">
   <div class="section-inner">
-    <div class="eyebrow">05 / See the value in context</div>
+    <div class="eyebrow">02 / The model</div>
     <div class="section-head">
-      <h2>ONE PRIORITY. <span class="blue">MULTIPLE USES.</span></h2>
-      <p>The same ₹2L engagement can look very different depending on what the business needs right now.</p>
+      <h2>GET KNOWN. BUILD TRUST. EARN AUTHORITY. ACTIVATE DEMAND.</h2>
+      <p>Awareness is the entry point. Trust and authority are what compound once the market keeps seeing useful, credible stories from the same brand.</p>
     </div>
-    <div class="engage-grid">
-      <article class="engage"><div class="n">Launch</div><h3>NEW PRODUCT</h3><ul><li>Hero product story</li><li>Founder or product leader interview</li><li>4 launch shorts</li></ul><small>Website · Sales · LinkedIn · YouTube · Launch campaign</small></article>
-      <article class="engage"><div class="n">Proof</div><h3>CUSTOMER STORY</h3><ul><li>Hero customer success story</li><li>Customer conversation</li><li>4 proof-led shorts</li></ul><small>Website · Sales follow-up · LinkedIn · Paid campaigns</small></article>
-      <article class="engage"><div class="n">Authority</div><h3>FOUNDER VISIBILITY</h3><ul><li>Founder story</li><li>Founder POV interview</li><li>4 thought-leadership shorts</li></ul><small>LinkedIn · YouTube · Website · PR</small></article>
-      <article class="engage"><div class="n">Hiring</div><h3>TEAM + CULTURE</h3><ul><li>Team or culture film</li><li>Day in the life</li><li>4 employee story shorts</li></ul><small>Careers · Recruiting · LinkedIn · Instagram</small></article>
-      <article class="engage"><div class="n">Leadership</div><h3>CXO AUTHORITY</h3><ul><li>CXO POV interview</li><li>Day in the life</li><li>4 executive insight shorts</li></ul><small>LinkedIn · YouTube · Events · PR</small></article>
-      <article class="engage"><div class="n">Conversation</div><h3>PODCAST</h3><ul><li>Full podcast episode</li><li>Executive or customer conversation</li><li>4 insight shorts</li></ul><small>YouTube · LinkedIn · Instagram · Newsletter</small></article>
+
+    <div class="model-tabs">
+      <button class="model-tab active" data-stage="known"><div class="model-num">01</div><b>Get known</b><small>Put the story in front of the right people.</small></button>
+      <button class="model-tab" data-stage="trust"><div class="model-num">02</div><b>Build trust</b><small>Show what you stand for and how you create value.</small></button>
+      <button class="model-tab" data-stage="authority"><div class="model-num">03</div><b>Earn authority</b><small>Become the company people associate with the problem.</small></button>
+      <button class="model-tab" data-stage="demand"><div class="model-num">04</div><b>Activate demand</b><small>Make outbound, inbound and partnerships work harder.</small></button>
+    </div>
+
+    <div class="model-detail">
+      <h3 id="modelTitle">BE SEEN BEFORE SALES SHOWS UP.</h3>
+      <p id="modelCopy">Founder stories, launch films and useful point-of-view content create familiarity. The first goal is simple: when your name appears in an inbox, it should not feel completely new.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section stories" id="stories">
+  <div class="section-inner">
+    <div class="eyebrow">03 / The stories that move the market</div>
+    <div class="section-head">
+      <h2>ONE COMPANY. MANY REASONS TO BELIEVE.</h2>
+      <p>Different stories do different jobs. Click any format to see what it is designed to achieve.</p>
+    </div>
+
+    <div class="story-track">
+      <article class="story-card" data-title="Brand Story" data-copy="Make the company understandable and memorable. A strong brand story connects the problem you exist to solve with the people and conviction behind the business." data-tags="Awareness|Positioning|Website|Sales">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=82" alt="Team collaborating in an office"/>
+        <div class="story-label"><b>Brand Story</b><span>Why you exist</span></div><div class="story-arrow">→</div>
+      </article>
+      <article class="story-card" data-title="New Product or Service" data-copy="Turn a launch into a clear market story. Explain the problem, the new capability and why the change matters without making the audience read a feature list." data-tags="Awareness|Launch|Product understanding|Demand">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=82" alt="Team planning a product launch"/>
+        <div class="story-label"><b>New Product or Service</b><span>Make the launch matter</span></div><div class="story-arrow">→</div>
+      </article>
+      <article class="story-card" data-title="Founder or Team Story" data-copy="Humanise the company. Let buyers understand the people, decisions and point of view behind the logo." data-tags="Trust|Authority|Founder brand|Employer brand">
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=82" alt="Company team in a modern office"/>
+        <div class="story-label"><b>Founder / Team Story</b><span>Make the brand human</span></div><div class="story-arrow">→</div>
+      </article>
+
+      <article class="story-card small" data-title="A Day in the Life of the CEO" data-copy="Follow a leader through the decisions, meetings and moments that show how the company actually operates. Great executive visibility without a staged talking-head feel." data-tags="CXO visibility|Authority|Culture">
+        <img src="https://images.unsplash.com/photo-1758599543154-af711da44cbe?auto=format&fit=crop&w=1000&q=82" alt="Business leaders walking and talking"/>
+        <div class="story-label"><b>A Day in the Life of the CEO</b><span>Show the work behind the title</span></div><div class="story-arrow">→</div>
+      </article>
+      <article class="story-card small" data-title="Customer Testimonial" data-copy="Turn customer success into proof that sales can use. The strongest version is not a scripted endorsement, but a clear story about the problem, change and outcome." data-tags="Proof|Trust|Sales enablement">
+        <img src="https://images.unsplash.com/photo-1758518727820-28491c194bee?auto=format&fit=crop&w=1000&q=82" alt="Customers and business leaders in discussion"/>
+        <div class="story-label"><b>Customer Testimonials</b><span>Turn success into proof</span></div><div class="story-arrow">→</div>
+      </article>
+      <article class="story-card small" data-title="Customer Interview" data-copy="Go deeper than a testimonial. Let the customer talk about their market, the problem and what changed, so the content is useful even before it becomes proof." data-tags="Customer advocacy|Authority|Proof">
+        <img src="https://images.unsplash.com/photo-1783061044343-69dc0c78ad87?auto=format&fit=crop&w=1000&q=82" alt="Colleagues in a business discussion"/>
+        <div class="story-label"><b>Customer Interviews</b><span>Let the customer make the case</span></div><div class="story-arrow">→</div>
+      </article>
+      <article class="story-card small" data-title="Podcast" data-copy="Use a long-form conversation as the anchor for deeper authority and downstream content. One thoughtful episode can create a library of shorter ideas." data-tags="Authority|Relationships|Long form|Repurposing">
+        <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1000&q=82" alt="Podcast microphone in a studio"/>
+        <div class="story-label"><b>Podcasts</b><span>Own a conversation</span></div><div class="story-arrow">→</div>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section proof" id="proof">
-  <div class="section-inner proof-wrap">
-    <div class="proof-copy">
-      <div>
-        <div class="eyebrow">06 / Proof</div>
-        <h2>THE WORK SHOULD <span class="blue">SHOW FOR ITSELF.</span></h2>
+  <div class="section-inner">
+    <div class="eyebrow">04 / Client proof</div>
+    <div class="section-head">
+      <h2>PROOF THAT FEELS REAL.</h2>
+      <p>The market does not need more claims from you. It needs stories, people and evidence it can believe.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="video-box">
+        <iframe src="https://drive.google.com/file/d/1NfkHdF8Qn8JfdoqaGsYUFo1lnDCfH7Et/preview" allow="autoplay; fullscreen" allowfullscreen title="GetGTM client story"></iframe>
       </div>
-      <div>
-        <p>A real Whizzlead client story from GetGTM. This is the original client video, shown without a separate website edit.</p>
-        <a class="btn" href="https://getgtm.ai/" target="_blank" rel="noopener noreferrer">VISIT GETGTM ↗</a>
+      <div class="proof-side">
+        <div>
+          <div class="eyebrow">GetGTM / Client story</div>
+          <h3>LET THE WORK SHOW THE VALUE.</h3>
+          <p>This is the original GetGTM client film. No separate website edit. The point is to show what a real client story can feel like when the customer, company and narrative are allowed to do the selling.</p>
+        </div>
+        <div class="proof-points">
+          <div class="proof-point"><span>01</span><div>Use customer voice to reduce the credibility burden on sales.</div></div>
+          <div class="proof-point"><span>02</span><div>Use the same story across website, outbound follow-up and social distribution.</div></div>
+          <div class="proof-point"><span>03</span><div>Build a body of evidence the market can discover before the meeting.</div></div>
+        </div>
       </div>
     </div>
-    <div class="video">
-      <iframe src="https://drive.google.com/file/d/1NfkHdF8Qn8JfdoqaGsYUFo1lnDCfH7Et/preview" allow="autoplay; fullscreen" allowfullscreen title="GetGTM client story"></iframe>
+  </div>
+</section>
+
+<section class="section process" id="process">
+  <div class="section-inner">
+    <div class="eyebrow">05 / Done for you, end to end</div>
+    <div class="section-head">
+      <h2>YOU FOCUS ON THE BUSINESS. WE HANDLE THE STORY.</h2>
+      <p>One partner takes the brief from business objective through shoot, edit and a platform-ready asset set.</p>
+    </div>
+    <div class="process-grid">
+      <article class="process-card">
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=82" alt="Content strategy planning"/></div>
+        <div class="process-body"><span class="n">01</span><h3>Concept</h3><p>We align on the business outcome and craft the story angle around it.</p></div>
+      </article>
+      <article class="process-card">
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1758518727820-28491c194bee?auto=format&fit=crop&w=800&q=82" alt="Business team in a professional setting"/></div>
+        <div class="process-body"><span class="n">02</span><h3>Shoot</h3><p>A focused two-day production built around the people and moments the story needs.</p></div>
+      </article>
+      <article class="process-card">
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=82" alt="Team working with laptops"/></div>
+        <div class="process-body"><span class="n">03</span><h3>Edit</h3><p>We shape one or two hero assets and four supporting short-form cuts.</p></div>
+      </article>
+      <article class="process-card">
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=82" alt="Team working in a modern office"/></div>
+        <div class="process-body"><span class="n">04</span><h3>Put it to work</h3><p>Assets are delivered ready for website, LinkedIn, YouTube, sales or campaign use.</p></div>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section price" id="investment">
-  <div class="section-inner">
-    <div class="eyebrow">07 / The production engagement</div>
-    <div class="section-head">
-      <h2>₹2L TO TURN ONE PRIORITY INTO A <span class="blue">CONTENT CAMPAIGN.</span></h2>
-      <p>The value is not in counting individual edits. It is in getting the thinking, production and post handled by one team, then walking away with assets that can work in multiple places.</p>
+  <div class="section-inner price-grid">
+    <div class="price-intro">
+      <div class="eyebrow">06 / Investment</div>
+      <h2>A PREMIUM PACKAGE. REAL BUSINESS OUTCOMES.</h2>
+      <p>One business priority. One sharp story system. Assets that keep working after the shoot.</p>
     </div>
-    <div class="price-grid">
-      <div class="price-main">
-        <div class="price-kicker">Investment</div>
-        <div class="amount">₹2,00,000<small>+ GST / engagement</small></div>
-        <div>
-          <h3>ONE BRIEF. TWO DAYS. SIX ASSETS.</h3>
-          <p>Built around one business priority and delivered as a coherent set, not a pile of disconnected edits.</p>
-        </div>
-      </div>
-      <div class="includes">
-        <h3>WHAT YOU WALK AWAY WITH.</h3>
-        <div class="inc"><span>01</span><div><b>1–2 long-form hero assets</b><small>Up to 10 minutes finished duration per asset.</small></div></div>
-        <div class="inc"><span>02</span><div><b>4 short-form cuts</b><small>Designed to extend the core story across distribution channels.</small></div></div>
-        <div class="inc"><span>03</span><div><b>2 production days</b><small>Planned around the people, locations and shots required for the story.</small></div></div>
-        <div class="inc"><span>04</span><div><b>Concept + pre-production</b><small>Narrative, talking points, interview direction, schedule and shot plan.</small></div></div>
-        <div class="inc"><span>05</span><div><b>Production + post</b><small>Professional capture, editing, finishing and platform-ready delivery.</small></div></div>
-        <div class="price-note"><b>Why this matters:</b> the same shoot can give marketing, sales, leadership and recruiting usable content without four separate production projects.</div>
-        <div class="price-actions">
-          <a class="btn bluebtn" href="https://rzp.io/rzp/aMS18hw" target="_blank" rel="noopener noreferrer">BOOK & PAY ₹2,00,000 ↗</a>
-          <a class="btn" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">TALK FIRST ↗</a>
-        </div>
-      </div>
+    <div class="price-card">
+      <span class="price-badge">Production engagement</span>
+      <div class="amount">₹2,00,000<small>+ GST</small></div>
+      <ul class="price-list">
+        <li><i>✓</i><span>1–2 long-form content assets</span></li>
+        <li><i>✓</i><span>Up to 10 minutes each</span></li>
+        <li><i>✓</i><span>4 short-form videos</span></li>
+        <li><i>✓</i><span>Shot over 2 production days</span></li>
+        <li><i>✓</i><span>Concept, pre-production, shoot and edit</span></li>
+        <li><i>✓</i><span>Platform-ready delivery</span></li>
+      </ul>
+      <a class="btn primary" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">TALK TO US ↗</a>
     </div>
-  </div>
-</section>
-
-<section class="section reuse">
-  <div class="section-inner reuse-wrap">
-    <div>
-      <div class="eyebrow">08 / Make the shoot keep working</div>
-      <h2>THE HERO FILM IS THE START. <span class="blue">NOT THE END.</span></h2>
-    </div>
-    <div class="reuse-map">
-      <div><b>Website</b><span>Brand · Product · Proof</span></div>
-      <div><b>Sales</b><span>Follow-up · Enablement</span></div>
-      <div><b>LinkedIn</b><span>Founder · CXO · Proof</span></div>
-      <div><b>YouTube</b><span>Long form · Discovery</span></div>
-      <div><b>Recruiting</b><span>Culture · Team · Leadership</span></div>
-      <div><b>Campaigns</b><span>Launch · Paid · Retargeting</span></div>
+    <div class="founder-card">
+      <div class="eyebrow" style="color:#8ebfff">Founder Proof Offer</div>
+      <h3>3 SLOTS ONLY.</h3>
+      <p>Experience the paid workflow on one real priority asset before deciding whether you want to work together.</p>
+      <ul class="founder-list">
+        <li><span>◉</span><span>1 priority content piece at no charge</span></li>
+        <li><span>◉</span><span>Concept through finished asset</span></li>
+        <li><span>◉</span><span>Same workflow as the paid engagement</span></li>
+      </ul>
+      <a class="btn" href="/founders-offer.html">SEE THE OFFER ↗</a>
     </div>
   </div>
 </section>
 
-<section class="section founder">
-  <div class="section-inner">
-    <div class="founder-box">
-      <div>
-        <div class="eyebrow">09 / Founder Proof Offer</div>
-        <h2>DON'T TAKE OUR WORD FOR IT. <span class="blue">PUT US TO WORK.</span></h2>
-      </div>
-      <div class="founder-copy">
-        <div class="founder-stat"><span>3 slots</span><span>1 priority asset</span><span>₹0</span></div>
-        <p>Give us one priority content idea. We take it from concept to finished, platform-ready asset using the same workflow as a paid engagement.</p>
-        <a class="btn bluebtn" href="/founders-offer.html">SEE THE FOUNDER OFFER ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact">
-  <div class="contact-inner">
-    <h2>WHAT NEEDS TO <span style="color:#fff">MOVE?</span></h2>
-    <div>
-      <p>Launch. Trust. Authority. Hiring. Customer proof. Tell us the business priority and we will shape the production around it.</p>
-      <a class="btn" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">PLAN THE SHOOT ↗</a>
-    </div>
-  </div>
-  <footer class="footer">
-    <span>Whizzlead Media</span>
-    <span>Bengaluru / Chennai / Remote</span>
-    <a href="mailto:vinay@whizzleadmedia.com">vinay@whizzleadmedia.com</a>
-  </footer>
-</section>
 </main>
+
+<footer class="footer">
+  <div class="footer-in">
+    <span>Whizzlead Media</span>
+    <span>Make the market know you before sales asks for the meeting.</span>
+    <a href="mailto:vinay@whizzleadmedia.com">vinay@whizzleadmedia.com</a>
+  </div>
+</footer>
+
+<div class="story-pop" id="storyPop" aria-hidden="true">
+  <div class="story-modal">
+    <button class="close" id="storyClose" aria-label="Close">×</button>
+    <div class="eyebrow">Story format</div>
+    <h3 id="storyTitle"></h3>
+    <p id="storyCopy"></p>
+    <div class="modal-tags" id="storyTags"></div>
+  </div>
+</div>
 
 <script>
 const menuBtn=document.getElementById('menuBtn');
@@ -542,6 +489,52 @@ const menuClose=document.getElementById('menuClose');
 menuBtn?.addEventListener('click',()=>mobileNav.classList.add('open'));
 menuClose?.addEventListener('click',()=>mobileNav.classList.remove('open'));
 mobileNav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileNav.classList.remove('open')));
+
+const stages={
+  known:{
+    title:'BE SEEN BEFORE SALES SHOWS UP.',
+    copy:'Founder stories, launch films and useful point-of-view content create familiarity. The first goal is simple: when your name appears in an inbox, it should not feel completely new.'
+  },
+  trust:{
+    title:'GIVE PEOPLE EVIDENCE TO BELIEVE.',
+    copy:'Customer stories, team stories and clear product narratives turn awareness into credibility. The buyer can see who you are, how you think and whether other people trust you.'
+  },
+  authority:{
+    title:'MAKE YOUR POINT OF VIEW RECOGNISABLE.',
+    copy:'Repeated founder, CXO and customer perspectives give the market something to associate with your name. Authority is built when useful ideas become recognisable patterns.'
+  },
+  demand:{
+    title:'NOW ASK FOR THE CONVERSATION.',
+    copy:'Outbound, inbound and partnerships work differently when the prospect already has context. The message can focus on relevance and timing instead of carrying the entire brand story.'
+  }
+};
+const tabs=[...document.querySelectorAll('.model-tab')];
+const modelTitle=document.getElementById('modelTitle');
+const modelCopy=document.getElementById('modelCopy');
+tabs.forEach(tab=>tab.addEventListener('click',()=>{
+  tabs.forEach(t=>t.classList.remove('active'));
+  tab.classList.add('active');
+  const s=stages[tab.dataset.stage];
+  modelTitle.textContent=s.title;
+  modelCopy.textContent=s.copy;
+}));
+
+const storyPop=document.getElementById('storyPop');
+const storyTitle=document.getElementById('storyTitle');
+const storyCopy=document.getElementById('storyCopy');
+const storyTags=document.getElementById('storyTags');
+document.querySelectorAll('.story-card').forEach(card=>card.addEventListener('click',()=>{
+  storyTitle.textContent=card.dataset.title;
+  storyCopy.textContent=card.dataset.copy;
+  storyTags.innerHTML=card.dataset.tags.split('|').map(x=>`<span>${x}</span>`).join('');
+  storyPop.classList.add('open');
+  storyPop.setAttribute('aria-hidden','false');
+}));
+function closeStory(){storyPop.classList.remove('open');storyPop.setAttribute('aria-hidden','true')}
+document.getElementById('storyClose').addEventListener('click',closeStory);
+storyPop.addEventListener('click',e=>{if(e.target===storyPop)closeStory()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeStory()});
 </script>
+
 </body>
 </html>
