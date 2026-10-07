@@ -135,19 +135,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .modal-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
 .modal-tags span{border:1px solid var(--line);border-radius:999px;padding:8px 10px;font:8px "DM Mono",monospace;text-transform:uppercase}
 
-/* PROOF */
-.proof{background:#edf5ff}
-.proof-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:14px}
-.video-box{background:#08111f;border-radius:18px;overflow:hidden;aspect-ratio:16/9}
-.video-box iframe{width:100%;height:100%;border:0}
-.proof-side{background:#fff;border:1px solid #dfe7f2;border-radius:18px;padding:26px;display:flex;flex-direction:column;justify-content:space-between}
-.proof-side h3{font-size:clamp(33px,3.35vw,52px);line-height:.9;letter-spacing:-.06em;margin:0 0 17px}
-.proof-side p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
-.proof-points{margin-top:24px}
-.proof-point{padding:11px 0;border-top:1px solid var(--line);font-size:12px;display:grid;grid-template-columns:26px 1fr;gap:8px}
-.proof-point span{color:var(--blue);font-family:"DM Mono",monospace}
-.proof-side .btn{margin-top:18px;align-self:flex-start}
-
 /* PROCESS */
 .process{background:#fff}
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
@@ -260,10 +247,6 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 .planner-note details{margin-top:8px}
 .planner-note summary{cursor:pointer;color:#335f98}
 .planner-note a{color:#2f7df6;text-decoration:underline}
-.founder-inline{margin-top:14px;border-radius:18px;background:linear-gradient(145deg,#071529,#0b315a);color:#fff;padding:22px;display:flex;justify-content:space-between;gap:24px;align-items:center}
-.founder-inline h4{font-size:28px;letter-spacing:-.05em;margin:0 0 6px}
-.founder-inline p{font-size:11px;color:#c7d9ed;margin:0}
-.founder-inline .offer-price{font-size:24px;font-weight:900;white-space:nowrap}
 
 
 /* FINAL CTA */
@@ -361,6 +344,65 @@ img{display:block;width:100%;height:100%;object-fit:cover}
   .plan-metric.total{grid-column:auto}
 }
 
+
+/* V7 CLEANUP AND TYPE AUDIT */
+:root{--max:1320px;--radius:20px}
+.section{padding:76px var(--pad)}
+.section-head{gap:36px;margin-bottom:26px}
+.section-head h2{font-size:clamp(40px,4.35vw,64px);line-height:.9;letter-spacing:-.058em}
+.section-head p{font-size:13px;line-height:1.55}
+.eyebrow{font-size:8px;letter-spacing:.13em}
+.hero h1{font-size:clamp(54px,5.9vw,88px);line-height:.86;letter-spacing:-.068em}
+.hero-copy p{font-size:clamp(15px,1.1vw,18px)}
+.nav{gap:19px}
+.model-card b{font-size:22px}
+.model-detail h3{font-size:clamp(30px,2.9vw,44px)}
+.story-label b{font-size:clamp(19px,1.7vw,26px)}
+.process-body h3{font-size:22px}
+.distribution-grid{grid-template-columns:1fr 1fr}
+.vsl-wrap{grid-template-columns:1fr}
+.vsl-card{padding:22px}
+.vsl-card h4{font-size:24px}
+.vsl-steps{grid-template-columns:repeat(7,1fr)}
+.distribution .section-head h2{max-width:13ch}
+.transparent-price{background:linear-gradient(180deg,#edf5ff,#f8fafc)}
+.transparent-head{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:end;margin-bottom:24px}
+.transparent-head h2{font-size:clamp(40px,4.35vw,64px);line-height:.9;letter-spacing:-.058em;margin:0;max-width:12ch}
+.transparent-head p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+.pricing-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.simple-price{background:#fff;border:1px solid #dbe4ef;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(38,70,110,.05)}
+.simple-price.advanced{background:linear-gradient(145deg,#071529,#0b315a);color:#fff;border-color:#153f69}
+.simple-price h3{font-size:clamp(28px,2.6vw,40px);line-height:.94;letter-spacing:-.05em;margin:0 0 10px}
+.simple-price p{font-size:12px;line-height:1.5}
+.simple-amount{font-size:38px;font-weight:900;letter-spacing:-.05em;margin:18px 0}
+.simple-amount small{font:9px "DM Mono",monospace;text-transform:uppercase;color:#7b899d;margin-left:4px}
+.simple-price.advanced .simple-amount small{color:#9bb9db}
+.simple-price ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.simple-price li{font-size:12px;line-height:1.4;padding-left:18px;position:relative}
+.simple-price li:before{content:'✓';position:absolute;left:0;color:var(--blue)}
+.simple-price.advanced li:before{color:#8bb8ff}
+.actuals-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 14px}
+.actuals-strip div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.actuals-strip b{display:block;font-size:13px;margin-bottom:4px}
+.actuals-strip span{font-size:11px;color:var(--muted);line-height:1.4}
+.media-planner.compact{padding:22px}
+.site-analyser{margin-bottom:10px}
+.website-control{background:#f8fbff}
+.website-row{display:grid;grid-template-columns:1fr auto;gap:8px}
+.website-row input{width:100%;border:0;background:transparent;font:600 15px Inter,sans-serif;outline:none;color:#0a0d13}
+.website-row button{border:0;border-radius:8px;background:var(--navy);color:#fff;padding:10px 12px;font:8px "DM Mono",monospace;text-transform:uppercase;cursor:pointer}
+.website-control small{display:block;margin-top:7px;color:#7e8b9e;font-size:9px}
+.planner-controls.four{grid-template-columns:.9fr .75fr .75fr 1.25fr}
+.planner-results.clean{grid-template-columns:repeat(5,1fr)}
+.plan-metric{padding:14px}
+.plan-metric b{font-size:clamp(18px,1.7vw,26px)}
+.final-box{padding:32px 36px}
+.final-box h2{font-size:clamp(32px,3.5vw,50px)}
+.footer{padding-top:24px;padding-bottom:24px}
+@media(max-width:1050px){.transparent-head,.pricing-pair{grid-template-columns:1fr}.planner-controls.four{grid-template-columns:1fr 1fr}.planner-controls.four .control:last-child{grid-column:1/3}.planner-results.clean{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.section{padding:60px 20px}.hero h1{font-size:clamp(48px,13vw,66px)}.actuals-strip{grid-template-columns:1fr}.planner-controls.four{grid-template-columns:1fr}.planner-controls.four .control:last-child{grid-column:auto}.planner-results.clean{grid-template-columns:1fr 1fr}.plan-metric.total{grid-column:1/3}.website-row{grid-template-columns:1fr}.website-row button{width:100%}.vsl-steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.planner-results.clean{grid-template-columns:1fr}.plan-metric.total{grid-column:auto}}
+
 </style>
 </head>
 <body>
@@ -375,10 +417,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     <a href="#model">Model</a>
     <a href="#stories">Stories</a>
     <a href="#distribution">Distribution</a>
-    <a href="#proof">Proof</a>
     <a href="#process">Process</a>
     <a href="#investment">Investment</a>
-    <a href="/founders-offer.html">Founder offer</a>
     <a class="talk" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">Talk to us ↗</a>
   </nav>
   <button class="menu" id="menuBtn" aria-label="Open menu">Menu</button>
@@ -387,8 +427,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 <div class="mobile-nav" id="mobileNav">
   <button class="close" id="menuClose" aria-label="Close menu">×</button>
   <a href="#problem">Why</a><a href="#model">Model</a><a href="#stories">Stories</a>
-  <a href="#distribution">Distribution</a><a href="#proof">Proof</a><a href="#process">Process</a><a href="#investment">Investment</a>
-  <a href="/founders-offer.html">Founder offer</a>
+  <a href="#distribution">Distribution</a><a href="#process">Process</a><a href="#investment">Investment</a>
   <a href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">Talk to us ↗</a>
 </div>
 
@@ -534,10 +573,10 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 
 <section class="section distribution" id="distribution">
   <div class="section-inner">
-    <div class="eyebrow">04 / Distribution turns attention into action</div>
+    <div class="eyebrow">04 / Distribution</div>
     <div class="section-head">
-      <h2>CREATING CONTENT IS HALF THE BATTLE. DISTRIBUTION IS WHERE IT STARTS TO CONVERT.</h2>
-      <p>A great asset creates awareness. A distribution system makes sure the right buyers actually see it, see it again, understand the offer and have somewhere useful to go next.</p>
+      <h2>CREATING THE ASSET IS HALF THE JOB. DISTRIBUTION MAKES IT WORK.</h2>
+      <p>The asset creates awareness. Distribution turns that attention into repeated exposure, intent and action.</p>
     </div>
 
     <div class="distribution-grid">
@@ -575,10 +614,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
     </div>
 
     <div class="vsl-wrap">
-      <div class="vsl-video">
-        <iframe src="https://www.youtube.com/embed/Lm_PEN6PH-M" title="VSL reference framework" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="vsl-card">
+      <div class="vsl-card" style="grid-column:1/-1">
         <div class="eyebrow">VSL conversion framework</div>
         <h4>TURN THE STORY INTO A REASON TO ACT.</h4>
         <div class="vsl-steps">
@@ -590,7 +626,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
           <div class="vsl-step"><span>06</span><b>Offer</b></div>
           <div class="vsl-step"><span>07</span><b>CTA</b></div>
         </div>
-        <p style="margin:14px 0 0;color:#b8c9df;font-size:11px;line-height:1.5">The advanced package uses this structure to turn awareness creative into a conversion asset, then connects it to the right paid distribution and retargeting path.</p>
+        <p style="margin:14px 0 0;color:#b8c9df;font-size:11px;line-height:1.5">Use the VSL structure when the goal is conversion: make the problem clear, introduce the mechanism, show proof, present the offer and ask for action.</p>
       </div>
     </div>
 
@@ -602,37 +638,9 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 </section>
 
 
-<section class="section proof" id="proof">
-  <div class="section-inner">
-    <div class="eyebrow">05 / Client proof</div>
-    <div class="section-head">
-      <h2>PROOF THAT FEELS REAL.</h2>
-      <p>The market does not need more claims from you. It needs stories, people and evidence it can believe.</p>
-    </div>
-    <div class="proof-grid">
-      <div class="video-box">
-        <iframe src="https://drive.google.com/file/d/1NfkHdF8Qn8JfdoqaGsYUFo1lnDCfH7Et/preview" allow="autoplay; fullscreen" allowfullscreen title="GetGTM client story"></iframe>
-      </div>
-      <div class="proof-side">
-        <div>
-          <div class="eyebrow">GetGTM / Client story</div>
-          <h3>LET THE CUSTOMER HELP SALES DO LESS EXPLAINING.</h3>
-          <p>This is the original GetGTM client film. A real customer story can live on the website, strengthen follow-up, support outbound and give buyers evidence before the meeting.</p>
-        </div>
-        <div class="proof-points">
-          <div class="proof-point"><span>01</span><div>Customer voice creates proof that does not sound like marketing copy.</div></div>
-          <div class="proof-point"><span>02</span><div>One story can support web, sales follow-up and social distribution.</div></div>
-          <div class="proof-point"><span>03</span><div>A library of proof reduces the credibility burden on outbound.</div></div>
-        </div>
-        <a class="btn" href="https://getgtm.ai/" target="_blank" rel="noopener noreferrer">VISIT GETGTM ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section process" id="process">
   <div class="section-inner">
-    <div class="eyebrow">06 / Done for you, end to end</div>
+    <div class="eyebrow">05 / Done for you, end to end</div>
     <div class="section-head">
       <h2>YOU RUN THE BUSINESS. WE HANDLE THE STORY.</h2>
       <p>One accountable partner takes the brief from business objective through production, edit and platform-ready delivery.</p>
@@ -659,61 +667,81 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 </section>
 
 
-<section class="section outcome-price" id="investment">
+<section class="section transparent-price" id="investment">
   <div class="section-inner">
-    <div class="eyebrow">07 / Outcome-based commercial model</div>
-    <div class="outcome-price-head">
-      <h2>PRICE THE OUTCOME. NOT THE NUMBER OF VIDEOS.</h2>
-      <p>The fixed retainer funds the operating system: strategy, story development, production, creative iteration and distribution. Media spend is separate, so you can scale reach without renegotiating production every time.</p>
+    <div class="eyebrow">06 / Transparent pricing</div>
+    <div class="transparent-head">
+      <div><h2>PAY FOR THE OPERATING MODEL. SEE THE ACTUAL COSTS.</h2></div>
+      <p>Our retainer covers strategy, creative direction and ongoing execution. Production, media, travel and accommodation stay separate so you can see exactly where the money goes.</p>
     </div>
 
-    <div class="retainer-grid">
-      <div class="retainer-card">
+    <div class="pricing-pair">
+      <article class="simple-price">
         <span class="retainer-tag">Authority retainer</span>
         <h3>GET KNOWN. BUILD TRUST.</h3>
-        <div class="retainer-amount">₹2,00,000 <small>+ GST / month</small></div>
-        <p>For companies that want a consistent market presence and a repeatable story system before layering on paid media.</p>
-        <ul class="retainer-list">
-          <li><i>✓</i><span>Outcome and narrative strategy</span></li>
-          <li><i>✓</i><span>Up to 2 production days per month</span></li>
-          <li><i>✓</i><span>Hero stories + platform-native derivatives as the outcome requires</span></li>
-          <li><i>✓</i><span>Organic distribution planning</span></li>
-          <li><i>✓</i><span>Monthly performance and story review</span></li>
+        <div class="simple-amount">₹1,00,000 <small>+ GST / month</small></div>
+        <ul>
+          <li>Outcome and narrative strategy</li>
+          <li>Content and story planning</li>
+          <li>Creative direction and monthly review</li>
+          <li>Organic distribution planning</li>
+          <li>Production billed separately on actuals</li>
         </ul>
-        <div class="retainer-actions">
-          <a class="btn primary" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">DESIGN THE OUTCOME ↗</a>
-          <a class="btn" href="https://rzp.io/rzp/aMS18hw" target="_blank" rel="noopener noreferrer">START ₹2L RETAINER ↗</a>
-        </div>
-      </div>
+      </article>
 
-      <div class="retainer-card advanced">
+      <article class="simple-price advanced">
         <span class="retainer-tag">Advanced distribution</span>
-        <h3>GET KNOWN. THEN MAKE THE ATTENTION WORK HARDER.</h3>
-        <div class="retainer-amount">₹2,00,000 <small>fixed retainer + media spend</small></div>
-        <p>The operating retainer stays fixed. Ad spend is deployed separately into the channels most likely to move the chosen business outcome.</p>
-        <ul class="retainer-list">
-          <li><i>✓</i><span>Everything in the Authority Retainer</span></li>
-          <li><i>✓</i><span>VSL framework and conversion asset</span></li>
-          <li><i>✓</i><span>Meta, Google and LinkedIn campaign activation as channel fit dictates</span></li>
-          <li><i>✓</i><span>Retargeting and creative iteration</span></li>
-          <li><i>✓</i><span>Media reporting from impressions through leads and qualified conversions</span></li>
+        <h3>TURN ATTENTION INTO DEMAND.</h3>
+        <div class="simple-amount">₹1,50,000 <small>+ GST / month</small></div>
+        <ul>
+          <li>Everything in Authority</li>
+          <li>VSL and conversion creative framework</li>
+          <li>Meta, Google and LinkedIn activation</li>
+          <li>Retargeting and creative iteration</li>
+          <li>Media reporting and optimisation</li>
         </ul>
-        <div class="retainer-actions">
-          <a class="btn secondary" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">BUILD THE DISTRIBUTION PLAN ↗</a>
-        </div>
-      </div>
+      </article>
     </div>
 
-    <div class="media-planner" id="mediaPlanner">
+    <div class="actuals-strip">
+      <div><b>Production</b><span>Billed on actuals.</span></div>
+      <div><b>Media spend</b><span>Separate from the retainer.</span></div>
+      <div><b>Travel + accommodation</b><span>Billed on actuals against receipts.</span></div>
+    </div>
+
+    <div class="media-planner compact" id="mediaPlanner">
       <div class="planner-head">
         <div>
-          <div class="eyebrow">Directional paid media planner</div>
+          <div class="eyebrow">Advanced distribution estimator</div>
           <h3>WHAT COULD YOUR AD SPEND BUY?</h3>
         </div>
-        <p>Choose a market, channel and monthly media budget. The calculator uses directional 2026 India benchmarks to estimate impressions, blended CPL and sales conversations.</p>
+        <p>Start with your website, confirm the industry, then choose the market, channel and monthly media budget. Results are directional planning estimates, not guarantees.</p>
       </div>
 
-      <div class="planner-controls">
+      <div class="site-analyser">
+        <div class="control website-control">
+          <label for="plannerWebsite">Website</label>
+          <div class="website-row">
+            <input id="plannerWebsite" type="url" placeholder="https://yourcompany.com"/>
+            <button id="detectIndustry" type="button">Estimate industry</button>
+          </div>
+          <small id="industryHint">We use the domain for a lightweight guess. Confirm the industry below.</small>
+        </div>
+      </div>
+
+      <div class="planner-controls four">
+        <div class="control">
+          <label for="plannerIndustry">Industry</label>
+          <select id="plannerIndustry">
+            <option value="b2b">B2B SaaS / Technology</option>
+            <option value="health">Healthcare</option>
+            <option value="services">Professional Services</option>
+            <option value="education">Education</option>
+            <option value="ecom">D2C / Ecommerce</option>
+            <option value="realestate">Real Estate</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
         <div class="control">
           <label for="plannerRegion">Market</label>
           <select id="plannerRegion">
@@ -722,17 +750,15 @@ img{display:block;width:100%;height:100%;object-fit:cover}
             <option value="india">Rest of India</option>
           </select>
         </div>
-
         <div class="control">
-          <label for="plannerChannel">Channel mix</label>
+          <label for="plannerChannel">Channel</label>
           <select id="plannerChannel">
-            <option value="blend">Blended: Meta + Google + LinkedIn</option>
+            <option value="blend">Blended</option>
             <option value="meta">Meta</option>
             <option value="google">Google</option>
             <option value="linkedin">LinkedIn</option>
           </select>
         </div>
-
         <div class="control">
           <label for="plannerSpend">Monthly ad spend</label>
           <div class="spend-row">
@@ -742,59 +768,14 @@ img{display:block;width:100%;height:100%;object-fit:cover}
         </div>
       </div>
 
-      <div class="planner-results">
-        <div class="plan-metric">
-          <span>Estimated impressions</span>
-          <b id="planImpressions">0</b>
-          <small>Approximate paid exposures</small>
-        </div>
-        <div class="plan-metric">
-          <span>Planning CPL</span>
-          <b id="planCPL">₹0</b>
-          <small>Spend divided by estimated leads</small>
-        </div>
-        <div class="plan-metric">
-          <span>Estimated leads</span>
-          <b id="planLeads">0</b>
-          <small>Directional form / enquiry volume</small>
-        </div>
-        <div class="plan-metric">
-          <span>Qualified conversions</span>
-          <b id="planConversions">0</b>
-          <small>Estimated sales conversations, not closed revenue</small>
-        </div>
-        <div class="plan-metric total">
-          <span>Total monthly investment</span>
-          <b id="planTotal">₹3,50,000</b>
-          <small>₹2L retainer + selected media spend, before GST</small>
-        </div>
+      <div class="planner-results clean">
+        <div class="plan-metric"><span>Estimated impressions</span><b id="planImpressions">0</b></div>
+        <div class="plan-metric"><span>Planning CPL</span><b id="planCPL">₹0</b></div>
+        <div class="plan-metric"><span>Estimated leads</span><b id="planLeads">0</b></div>
+        <div class="plan-metric"><span>Qualified conversations</span><b id="planConversions">0</b></div>
+        <div class="plan-metric total"><span>Retainer + media</span><b id="planTotal">₹3,00,000</b><small>Production and travel excluded</small></div>
       </div>
-
-      <div class="planner-note">
-        Directional planning estimate only. Actual results vary materially by industry, offer, audience seniority, creative quality, landing page, tracking and sales follow-up. Bengaluru and Chennai are modeled as Tier-1 markets, with small planning adjustments for competitive density.
-        <details>
-          <summary>Benchmark basis and assumptions</summary>
-          <p>
-            Planning inputs are synthesised from 2026 India benchmark ranges for
-            <a href="https://www.j9e.in/blog/meta-ads-cost-india-2026" target="_blank" rel="noopener noreferrer">Meta</a>,
-            <a href="https://nirzar.in/blog/google-ads-benchmarks-india-2026" target="_blank" rel="noopener noreferrer">Google Search</a>,
-            <a href="https://scalegrowth.digital/linkedin-ads-b2b-targeting-creative-benchmarks/" target="_blank" rel="noopener noreferrer">LinkedIn B2B</a>,
-            and Tier-1 vs broader India paid-social ranges from
-            <a href="https://sotrosinfotech.com/blog/paid-social-ads-benchmarks-india-southeast-asia-2026/" target="_blank" rel="noopener noreferrer">Sotros</a>.
-            The city-level figures in this calculator are planning assumptions rather than guaranteed platform benchmarks.
-          </p>
-        </details>
-      </div>
-    </div>
-
-    <div class="founder-inline">
-      <div>
-        <div class="eyebrow" style="color:#8dbbff">Founder offer</div>
-        <h4>2 SLOTS LEFT OF 3.</h4>
-        <p>One priority content piece fully produced at production cost so you can experience the workflow before committing to the retainer.</p>
-      </div>
-      <div class="offer-price">₹30,000</div>
-      <a class="btn" href="/founders-offer.html">CLAIM A SLOT ↗</a>
+      <div class="planner-note">Directional estimate only. Performance varies by offer, audience, landing page, creative quality, tracking and sales follow-up.</div>
     </div>
   </div>
 </section>
@@ -806,10 +787,9 @@ img{display:block;width:100%;height:100%;object-fit:cover}
       <h2>STOP MAKING SALES INTRODUCE THE BRAND.</h2>
     </div>
     <div>
-      <p>Tell us the business outcome you need to move. We will shape the story, production and distribution plan around it.</p>
+      <p>Tell us the outcome you want to move. We will shape the story, production and distribution plan around it.</p>
       <div class="final-actions">
         <a class="btn dark" href="https://calendly.com/vinay-whizzleadmedia/30min" target="_blank" rel="noopener noreferrer">PLAN YOUR SHOOT ↗</a>
-        <a class="btn" href="/founders-offer.html">FOUNDER OFFER ↗</a>
       </div>
     </div>
   </div>
@@ -880,67 +860,69 @@ document.getElementById('storyClose').addEventListener('click',closeStory);
 storyPop.addEventListener('click',e=>{if(e.target===storyPop)closeStory()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeStory()});
 
+
+
+
 const mediaBenchmarks={
-  bengaluru:{
-    meta:{cpm:280,cpl:1000,conv:.12},
-    google:{cpm:3000,cpl:4200,conv:.18},
-    linkedin:{cpm:900,cpl:3000,conv:.22}
-  },
-  chennai:{
-    meta:{cpm:250,cpl:900,conv:.12},
-    google:{cpm:2800,cpl:3900,conv:.18},
-    linkedin:{cpm:850,cpl:2800,conv:.22}
-  },
-  india:{
-    meta:{cpm:180,cpl:700,conv:.10},
-    google:{cpm:2400,cpl:3400,conv:.16},
-    linkedin:{cpm:650,cpl:2300,conv:.20}
-  }
+  bengaluru:{meta:{cpm:280,cpl:1000,conv:.12},google:{cpm:3000,cpl:4200,conv:.18},linkedin:{cpm:900,cpl:3000,conv:.22}},
+  chennai:{meta:{cpm:250,cpl:900,conv:.12},google:{cpm:2800,cpl:3900,conv:.18},linkedin:{cpm:850,cpl:2800,conv:.22}},
+  india:{meta:{cpm:180,cpl:700,conv:.10},google:{cpm:2400,cpl:3400,conv:.16},linkedin:{cpm:650,cpl:2300,conv:.20}}
+};
+const industryFactors={
+  b2b:{cpm:1.15,cpl:1.35,conv:1.05},
+  health:{cpm:1.10,cpl:1.20,conv:.95},
+  services:{cpm:1.00,cpl:1.10,conv:1.00},
+  education:{cpm:.90,cpl:.85,conv:1.05},
+  ecom:{cpm:.85,cpl:.70,conv:.90},
+  realestate:{cpm:1.05,cpl:1.25,conv:.95},
+  other:{cpm:1.00,cpl:1.00,conv:1.00}
 };
 const mediaWeights={meta:.40,google:.35,linkedin:.25};
-const retainer=200000;
+const advancedRetainer=150000;
 const inr=new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0});
 const num=new Intl.NumberFormat('en-IN',{maximumFractionDigits:0});
+const plannerIndustry=document.getElementById('plannerIndustry');
 const plannerRegion=document.getElementById('plannerRegion');
 const plannerChannel=document.getElementById('plannerChannel');
 const plannerSpend=document.getElementById('plannerSpend');
 const plannerSpendNumber=document.getElementById('plannerSpendNumber');
-
+const plannerWebsite=document.getElementById('plannerWebsite');
+const detectIndustry=document.getElementById('detectIndustry');
+const industryHint=document.getElementById('industryHint');
+function guessIndustry(url){
+  const s=(url||'').toLowerCase();
+  if(/health|clinic|care|med|physio|hospital|wellness/.test(s))return 'health';
+  if(/edu|school|learn|academy|college|course/.test(s))return 'education';
+  if(/realty|realestate|property|homes|estate/.test(s))return 'realestate';
+  if(/shop|store|fashion|beauty|food|d2c|commerce/.test(s))return 'ecom';
+  if(/consult|agency|services|legal|advis|account/.test(s))return 'services';
+  if(/saas|tech|ai|cloud|software|data|cyber|app/.test(s))return 'b2b';
+  return 'other';
+}
+detectIndustry?.addEventListener('click',()=>{
+  const guess=guessIndustry(plannerWebsite?.value);
+  if(plannerIndustry)plannerIndustry.value=guess;
+  if(industryHint)industryHint.textContent=guess==='other'?'Could not infer confidently. Please choose the closest industry.':'Industry preselected from the domain. Please confirm or change it.';
+  estimateMedia();
+});
 function clampSpend(v){return Math.min(1000000,Math.max(50000,Math.round(v/25000)*25000))}
 function estimateMedia(){
-  if(!plannerRegion||!plannerChannel||!plannerSpend)return;
-  const region=plannerRegion.value;
-  const channel=plannerChannel.value;
+  if(!plannerRegion||!plannerChannel||!plannerSpend||!plannerIndustry)return;
+  const region=plannerRegion.value, channel=plannerChannel.value, industry=plannerIndustry.value;
+  const f=industryFactors[industry]||industryFactors.other;
   const spend=clampSpend(Number(plannerSpend.value)||150000);
-  plannerSpend.value=spend;
-  plannerSpendNumber.value=spend;
+  plannerSpend.value=spend; plannerSpendNumber.value=spend;
   let impressions=0,leads=0,conversions=0;
-
-  if(channel==='blend'){
-    Object.entries(mediaWeights).forEach(([ch,w])=>{
-      const b=mediaBenchmarks[region][ch];
-      const s=spend*w;
-      impressions+=(s/b.cpm)*1000;
-      const l=s/b.cpl;
-      leads+=l;
-      conversions+=l*b.conv;
-    });
-  }else{
-    const b=mediaBenchmarks[region][channel];
-    impressions=(spend/b.cpm)*1000;
-    leads=spend/b.cpl;
-    conversions=leads*b.conv;
-  }
-
+  const add=(ch,s)=>{const base=mediaBenchmarks[region][ch];const cpm=base.cpm*f.cpm,cpl=base.cpl*f.cpl,conv=base.conv*f.conv;impressions+=(s/cpm)*1000;const l=s/cpl;leads+=l;conversions+=l*conv;};
+  if(channel==='blend')Object.entries(mediaWeights).forEach(([ch,w])=>add(ch,spend*w)); else add(channel,spend);
   const cpl=leads?spend/leads:0;
   document.getElementById('planImpressions').textContent=num.format(Math.round(impressions));
   document.getElementById('planCPL').textContent=inr.format(Math.round(cpl));
   document.getElementById('planLeads').textContent=num.format(Math.round(leads));
   document.getElementById('planConversions').textContent=num.format(Math.max(0,Math.round(conversions)));
-  document.getElementById('planTotal').textContent=inr.format(retainer+spend);
+  document.getElementById('planTotal').textContent=inr.format(advancedRetainer+spend);
 }
-plannerRegion?.addEventListener('change',estimateMedia);
-plannerChannel?.addEventListener('change',estimateMedia);
+plannerIndustry?.addEventListener('change',estimateMedia);plannerRegion?.addEventListener('change',estimateMedia);plannerChannel?.addEventListener('change',estimateMedia);
 plannerSpend?.addEventListener('input',()=>{plannerSpendNumber.value=plannerSpend.value;estimateMedia()});
 plannerSpendNumber?.addEventListener('change',()=>{plannerSpend.value=clampSpend(Number(plannerSpendNumber.value)||150000);estimateMedia()});
 estimateMedia();
