@@ -403,6 +403,74 @@ img{display:block;width:100%;height:100%;object-fit:cover}
 @media(max-width:760px){.section{padding:60px 20px}.hero h1{font-size:clamp(48px,13vw,66px)}.actuals-strip{grid-template-columns:1fr}.planner-controls.four{grid-template-columns:1fr}.planner-controls.four .control:last-child{grid-column:auto}.planner-results.clean{grid-template-columns:1fr 1fr}.plan-metric.total{grid-column:1/3}.website-row{grid-template-columns:1fr}.website-row button{width:100%}.vsl-steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:460px){.planner-results.clean{grid-template-columns:1fr}.plan-metric.total{grid-column:auto}}
 
+
+/* V8: wide-screen heading + pricing refinements */
+@media(min-width:1100px){
+  .section-head{
+    display:grid;
+    grid-template-columns:1.45fr .55fr;
+    gap:54px;
+    align-items:end;
+  }
+  .section-head h2,
+  .distribution .section-head h2,
+  .transparent-head h2,
+  .outcome-price-head h2{
+    max-width:none;
+    width:100%;
+  }
+  .distribution .section-head h2{
+    font-size:clamp(48px,5vw,76px);
+  }
+  .distribution .section-head p{
+    max-width:440px;
+    justify-self:end;
+  }
+  .transparent-head{
+    grid-template-columns:1.35fr .65fr;
+  }
+}
+.plan-lock{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin:10px 0 2px;
+  padding:7px 10px;
+  border-radius:999px;
+  background:var(--soft);
+  color:#315b95;
+  font:8px "DM Mono",monospace;
+  text-transform:uppercase;
+}
+.simple-price.advanced .plan-lock{
+  background:#123b67;
+  color:#a9ccfb;
+}
+.pilot-line{
+  margin:10px 0 0;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  font-size:11px;
+  color:#66758a;
+}
+.simple-price.advanced .pilot-line{
+  border-top-color:#284a6f;
+  color:#b8cbe2;
+}
+.pilot-line b{
+  color:var(--ink);
+  font-size:14px;
+}
+.simple-price.advanced .pilot-line b{
+  color:#fff;
+}
+.platform-floor{
+  margin-top:7px;
+  font-size:9px;
+  color:#7e8ba0;
+  line-height:1.35;
+}
+
 </style>
 </head>
 <body>
@@ -680,6 +748,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
         <span class="retainer-tag">Authority retainer</span>
         <h3>GET KNOWN. BUILD TRUST.</h3>
         <div class="simple-amount">₹1,00,000 <small>+ GST / month</small></div>
+        <div class="plan-lock">3 month lock-in</div>
+        <div class="pilot-line">Pilot engagement: <b>₹2,00,000 + GST</b></div>
         <ul>
           <li>Outcome and narrative strategy</li>
           <li>Content and story planning</li>
@@ -693,6 +763,8 @@ img{display:block;width:100%;height:100%;object-fit:cover}
         <span class="retainer-tag">Advanced distribution</span>
         <h3>TURN ATTENTION INTO DEMAND.</h3>
         <div class="simple-amount">₹1,50,000 <small>+ GST / month</small></div>
+        <div class="plan-lock">3 month lock-in</div>
+        <div class="pilot-line">Pilot engagement: <b>₹2,50,000 + GST</b></div>
         <ul>
           <li>Everything in Authority</li>
           <li>VSL and conversion creative framework</li>
@@ -715,7 +787,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
           <div class="eyebrow">Advanced distribution estimator</div>
           <h3>WHAT COULD YOUR AD SPEND BUY?</h3>
         </div>
-        <p>Start with your website, confirm the industry, then choose the market, channel and monthly media budget. Results are directional planning estimates, not guarantees.</p>
+        <p>Start with your website, confirm the industry, then choose the market, channel and monthly media budget. The spend slider starts at the channel floor used for planning. Results are directional estimates, not guarantees.</p>
       </div>
 
       <div class="site-analyser">
@@ -762,9 +834,10 @@ img{display:block;width:100%;height:100%;object-fit:cover}
         <div class="control">
           <label for="plannerSpend">Monthly ad spend</label>
           <div class="spend-row">
-            <input id="plannerSpend" type="range" min="50000" max="1000000" step="25000" value="150000"/>
-            <input id="plannerSpendNumber" type="number" min="50000" max="1000000" step="25000" value="150000"/>
+            <input id="plannerSpend" type="range" min="5000" max="1000000" step="5000" value="150000"/>
+            <input id="plannerSpendNumber" type="number" min="5000" max="1000000" step="5000" value="150000"/>
           </div>
+          <div class="platform-floor" id="platformFloor">Planning floor adjusts by channel.</div>
         </div>
       </div>
 
@@ -773,7 +846,7 @@ img{display:block;width:100%;height:100%;object-fit:cover}
         <div class="plan-metric"><span>Planning CPL</span><b id="planCPL">₹0</b></div>
         <div class="plan-metric"><span>Estimated leads</span><b id="planLeads">0</b></div>
         <div class="plan-metric"><span>Qualified conversations</span><b id="planConversions">0</b></div>
-        <div class="plan-metric total"><span>Retainer + media</span><b id="planTotal">₹3,00,000</b><small>Production and travel excluded</small></div>
+        <div class="plan-metric total"><span>Retainer + media</span><b id="planTotal">₹3,00,000</b><small>₹1.5L advanced retainer + media. Production and travel excluded.</small></div>
       </div>
       <div class="planner-note">Directional estimate only. Performance varies by offer, audience, landing page, creative quality, tracking and sales follow-up.</div>
     </div>
@@ -905,9 +978,34 @@ detectIndustry?.addEventListener('click',()=>{
   if(industryHint)industryHint.textContent=guess==='other'?'Could not infer confidently. Please choose the closest industry.':'Industry preselected from the domain. Please confirm or change it.';
   estimateMedia();
 });
-function clampSpend(v){return Math.min(1000000,Math.max(50000,Math.round(v/25000)*25000))}
+const platformFloor=document.getElementById('platformFloor');
+const channelMinimums={
+  meta:{amount:5000,label:'Meta: ₹5,000/month planning floor'},
+  google:{amount:5000,label:'Google: ₹5,000/month planning floor'},
+  linkedin:{amount:25000,label:'LinkedIn: ~₹25,000/month, aligned to the official $10/day minimum'},
+  blend:{amount:35000,label:'Blended: ₹35,000/month planning floor across Meta, Google and LinkedIn'}
+};
+function getChannelMinimum(){
+  return channelMinimums[plannerChannel?.value]||channelMinimums.blend;
+}
+function clampSpend(v){
+  const floor=getChannelMinimum().amount;
+  return Math.min(1000000,Math.max(floor,Math.round(v/5000)*5000));
+}
+function syncSpendFloor(){
+  if(!plannerSpend||!plannerSpendNumber)return;
+  const floor=getChannelMinimum();
+  plannerSpend.min=floor.amount;
+  plannerSpendNumber.min=floor.amount;
+  if(Number(plannerSpend.value)<floor.amount){
+    plannerSpend.value=floor.amount;
+    plannerSpendNumber.value=floor.amount;
+  }
+  if(platformFloor)platformFloor.textContent=floor.label;
+}
 function estimateMedia(){
   if(!plannerRegion||!plannerChannel||!plannerSpend||!plannerIndustry)return;
+  syncSpendFloor();
   const region=plannerRegion.value, channel=plannerChannel.value, industry=plannerIndustry.value;
   const f=industryFactors[industry]||industryFactors.other;
   const spend=clampSpend(Number(plannerSpend.value)||150000);
@@ -922,7 +1020,7 @@ function estimateMedia(){
   document.getElementById('planConversions').textContent=num.format(Math.max(0,Math.round(conversions)));
   document.getElementById('planTotal').textContent=inr.format(advancedRetainer+spend);
 }
-plannerIndustry?.addEventListener('change',estimateMedia);plannerRegion?.addEventListener('change',estimateMedia);plannerChannel?.addEventListener('change',estimateMedia);
+plannerIndustry?.addEventListener('change',estimateMedia);plannerRegion?.addEventListener('change',estimateMedia);plannerChannel?.addEventListener('change',()=>{syncSpendFloor();estimateMedia();});
 plannerSpend?.addEventListener('input',()=>{plannerSpendNumber.value=plannerSpend.value;estimateMedia()});
 plannerSpendNumber?.addEventListener('change',()=>{plannerSpend.value=clampSpend(Number(plannerSpendNumber.value)||150000);estimateMedia()});
 estimateMedia();
